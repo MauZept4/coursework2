@@ -25,13 +25,13 @@ public class ActivitiesRestController {
 
     @Operation(summary = "Get activity by id")
     @GetMapping("/get/{id}")
-    public Activities getById(@PathVariable("id") @Parameter(name = "id", description = "ID of schedule to get", required = true) String id){
+    public Activities getById(@PathVariable("id") @Parameter(name = "id", description = "ID of activity to get", required = true) String id){
         return service.getById(id);
     }
 
     @Operation(summary = "Delete activity by id")
     @DeleteMapping("/delete/{id}")
-    public Activities deleteById(@PathVariable("id") @Parameter(name = "id", description = "ID of schedule to delete", required = true) String id){
+    public Activities deleteById(@PathVariable("id") @Parameter(name = "id", description = "ID of activity to delete", required = true) String id){
         return service.delete(id);
     }
 

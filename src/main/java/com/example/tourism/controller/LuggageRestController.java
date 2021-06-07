@@ -25,13 +25,13 @@ public class LuggageRestController {
 
     @Operation(summary = "Get luggage by id")
     @GetMapping("/get/{id}")
-    public Luggage getById(@PathVariable("id") @Parameter(name = "id", description = "ID of section to get", required = true) String id){
+    public Luggage getById(@PathVariable("id") @Parameter(name = "id", description = "ID of luggage to get", required = true) String id){
         return service.getById(id);
     }
 
     @Operation(summary = "Delete luggage by id")
     @DeleteMapping("/delete/{id}")
-    public Luggage deleteById(@PathVariable("id") @Parameter(name = "id", description = "ID of section to delete", required = true) String id){
+    public Luggage deleteById(@PathVariable("id") @Parameter(name = "id", description = "ID of luggage to delete", required = true) String id){
         return service.delete(id);
     }
 

@@ -27,13 +27,13 @@ public class ExpensesRestController {
 
     @Operation(summary = "Get expenses by id")
     @GetMapping("/get/{id}")
-    public Expenses getById(@PathVariable("id") @Parameter(name = "id", description = "ID of diary to get", required = true) String id){
+    public Expenses getById(@PathVariable("id") @Parameter(name = "id", description = "ID of expenses to get", required = true) String id){
         return service.getById(id);
     }
 
     @Operation(summary = "Delete expenses by id")
     @DeleteMapping("/delete/{id}")
-    public Expenses deleteById(@PathVariable("id") @Parameter(name = "id", description = "ID of diary to delete", required = true) String id){
+    public Expenses deleteById(@PathVariable("id") @Parameter(name = "id", description = "ID of expenses to delete", required = true) String id){
         return service.delete(id);
     }
 

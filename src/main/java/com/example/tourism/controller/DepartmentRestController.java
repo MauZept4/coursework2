@@ -25,13 +25,13 @@ public class DepartmentRestController {
 
     @Operation(summary = "Get department by id")
     @GetMapping("/get/{id}")
-    public Department getById(@PathVariable("id") @Parameter(name = "id", description = "ID of head to get", required = true) String id){
+    public Department getById(@PathVariable("id") @Parameter(name = "id", description = "ID of departments to get", required = true) String id){
         return service.getById(id);
     }
 
     @Operation(summary = "Delete department by id")
     @DeleteMapping("/delete/{id}")
-    public Department deleteById(@PathVariable("id") @Parameter(name = "id", description = "ID of head to delete", required = true) String id){
+    public Department deleteById(@PathVariable("id") @Parameter(name = "id", description = "ID of departments to delete", required = true) String id){
         return service.delete(id);
     }
 

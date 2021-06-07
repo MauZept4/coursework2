@@ -25,13 +25,13 @@ public class TripRestController {
 
     @Operation(summary = "Get trip by id")
     @GetMapping("/get/{id}")
-    public Trip getById(@PathVariable("id") @Parameter(name = "id", description = "ID of route to get", required = true) String id){
+    public Trip getById(@PathVariable("id") @Parameter(name = "id", description = "ID of trip to get", required = true) String id){
         return service.getById(id);
     }
 
     @Operation(summary = "Delete trip by id")
     @DeleteMapping("/delete/{id}")
-    public Trip deleteById(@PathVariable("id") @Parameter(name = "id", description = "ID of route to delete", required = true) String id){
+    public Trip deleteById(@PathVariable("id") @Parameter(name = "id", description = "ID of trip to delete", required = true) String id){
         return service.delete(id);
     }
 

@@ -25,13 +25,13 @@ public class TouristDocRestController {
 
     @Operation(summary = "Get documents by id")
     @GetMapping("/get/{id}")
-    public touristDoc getById(@PathVariable("id") @Parameter(name = "id", description = "ID of amateur to get", required = true) String id){
+    public touristDoc getById(@PathVariable("id") @Parameter(name = "id", description = "ID of documents to get", required = true) String id){
         return service.getById(id);
     }
 
     @Operation(summary = "Delete documents by id")
     @DeleteMapping("/delete/{id}")
-    public touristDoc deleteById(@PathVariable("id") @Parameter(name = "id", description = "ID of group to delete", required = true) String id){
+    public touristDoc deleteById(@PathVariable("id") @Parameter(name = "id", description = "ID of documents to delete", required = true) String id){
         return service.delete(id);
     }
 

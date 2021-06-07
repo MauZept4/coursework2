@@ -25,13 +25,13 @@ public class HotelRestController {
 
     @Operation(summary = "Get hotel by id")
     @GetMapping("/get/{id}")
-    public Hotel getById(@PathVariable("id") @Parameter(name = "id", description = "ID of coach to get", required = true) String id){
+    public Hotel getById(@PathVariable("id") @Parameter(name = "id", description = "ID of hotels to get", required = true) String id){
         return service.getById(id);
     }
 
     @Operation(summary = "Delete hotel by id")
     @DeleteMapping("/delete/{id}")
-    public Hotel deleteById(@PathVariable("id") @Parameter(name = "id", description = "ID of amateur to delete", required = true) String id){
+    public Hotel deleteById(@PathVariable("id") @Parameter(name = "id", description = "ID of hotels to delete", required = true) String id){
         return service.delete(id);
     }
 

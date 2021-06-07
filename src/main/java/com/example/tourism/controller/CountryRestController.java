@@ -26,13 +26,13 @@ public class CountryRestController {
 
     @Operation(summary = "Get country by id")
     @GetMapping("/get/{id}")
-    public Country getById(@PathVariable("id") @Parameter(name = "id", description = "ID of amateur to get", required = true) String id){
+    public Country getById(@PathVariable("id") @Parameter(name = "id", description = "ID of country to get", required = true) String id){
         return service.getById(id);
     }
 
     @Operation(summary = "Delete country by id")
     @DeleteMapping("/delete/{id}")
-    public Country deleteById(@PathVariable("id") @Parameter(name = "id", description = "ID of amateur to delete", required = true) String id){
+    public Country deleteById(@PathVariable("id") @Parameter(name = "id", description = "ID of country to delete", required = true) String id){
         return service.delete(id);
     }
 
