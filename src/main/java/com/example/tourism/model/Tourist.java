@@ -18,7 +18,7 @@ public class Tourist {
     @Id
     private String id;
     private String name;
-    private int age;
+    private int yearOfBirth;
     private List<Expenses> expensesList;
     private Trip trip;
     private List<touristDoc> docList;

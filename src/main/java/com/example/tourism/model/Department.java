@@ -16,6 +16,7 @@ public class Department {
     @Id
     private String id;
     private String address;
+    private AirOperator airOperator;
     private String phone;
     private Double rating;
 }

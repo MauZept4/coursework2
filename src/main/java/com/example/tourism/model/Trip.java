@@ -21,5 +21,6 @@ public class Trip {
     private LocalDate startDate;
     private LocalDate endDate;
     private Country country;
+    private Department department;
     private List<Activities> activitiesList;
 }
