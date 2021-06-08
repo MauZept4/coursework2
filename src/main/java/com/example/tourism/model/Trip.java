@@ -20,5 +20,6 @@ public class Trip {
     private String id;
     private LocalDate startDate;
     private LocalDate endDate;
+    private Country country;
     private List<Activities> activitiesList;
 }
